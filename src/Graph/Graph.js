@@ -47,7 +47,7 @@ class Graph extends Component {
                             }
                         },
                         series: [{
-                            name: 'Crane 11',
+                            name: 'Crane ' + this.props.craneId,
                             data: result.map(Number)
                         }]
                     });
@@ -65,7 +65,6 @@ class Graph extends Component {
     render() {
         return (
             <>
-                <div>Infocrane</div>
                 <div id="altitude" className='graph'></div>
             </>
         );
