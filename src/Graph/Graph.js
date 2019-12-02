@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Highcharts from 'highcharts';
 import './Graph.css';
+import PropTypes from 'prop-types';
 
 class Graph extends Component {
 
@@ -10,7 +11,7 @@ class Graph extends Component {
             ).then(res => res.json())
             .then(
                 (result) => {
-                    console.log(this.fillRange(1546457200, 1546473600));
+                    console.log(result);
                     Highcharts.chart('altitude', {
                         title: {
                             text: 'Crane Altitude'
@@ -71,12 +72,12 @@ class Graph extends Component {
     }
 }
 
-// Graph.propTypes = {
-//     url: PropTypes.string,
-//     timeFrom: PropTypes.number,
-//     timeTo: PropTypes.number,
-//     craneId: PropTypes.number
-// };
+Graph.propTypes = {
+    url: PropTypes.string,
+    timeFrom: PropTypes.number,
+    timeTo: PropTypes.number,
+    craneId: PropTypes.number
+};
 
 export default Graph;
 
