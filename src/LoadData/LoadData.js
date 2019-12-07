@@ -28,7 +28,7 @@ class LoadData extends Component {
                 window.alert(result.message);
             },
             (error) => {
-                console.log('error!!', error);
+                console.log('An error has occurd, please contact the administrator for help', error);
             }
         )
     }

@@ -33,7 +33,7 @@ class App extends Component {
                     });
                 },
                 (error) => {
-                    console.log('error!!', error);
+                    console.log('An error has occurd, please contact the administrator for help', error);
                 }
             )
     }
