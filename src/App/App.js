@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Graph from '../Graph/Graph';
 import CraneInfo from '../CraneInfo/CraneInfo';
+import LoadData from '../LoadData/LoadData';
 import DatetimeRangePicker from 'react-datetime-range-picker';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
@@ -42,8 +43,11 @@ class App extends Component {
     render() {
         return (
             <>
+                <h1>Infocrane</h1>
+                <div>Please select time range to present:</div>
                 <DatetimeRangePicker onChange={this.dateTimeHandler.bind(this)} />
 
+                <div>Please select a crane to present:</div>
                 <Dropdown options={this.state.cranes} onChange={this.craneDropdownHandler.bind(this)} 
                     value={this.state.craneId} placeholder="Please select a Crane" />
                 
@@ -54,6 +58,8 @@ class App extends Component {
 
                 {this.state.timestamp &&
                 <CraneInfo url={`${process.env.REACT_APP_API_URL}/crane/data_at_time`} craneId={this.state.craneId} timestamp={this.state.timestamp}/>}
+           
+                <LoadData/>
             </>
         );
     }

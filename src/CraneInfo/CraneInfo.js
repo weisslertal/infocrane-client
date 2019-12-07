@@ -56,7 +56,7 @@ class CraneInfo extends Component {
     render() {
         return (
             <>
-                <h1>Crane Information</h1>
+                <h3>Crane Information</h3>
                 <div>Weight: { this.state.weight }</div>
                 <div>Altitude: { this.state.altitude }</div>
                 <div>Load Type: { this.state.load_type }</div>
