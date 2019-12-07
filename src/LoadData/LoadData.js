@@ -36,7 +36,7 @@ class LoadData extends Component {
     render() {
         return (
             <>
-                <div>Load data from file URL:</div>
+                <h3>Load data from file URL</h3>
                 <input placeholder='Enter Cycles file URL' 
                     onChange={(event) => this.setState({cycles_url: event.target.value})}/>
                 <input placeholder='Enter Sensor file URL' 

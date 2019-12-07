@@ -63,16 +63,18 @@ class CraneInfo extends Component {
     render() {
         return (
             <>
+                <img src={ this.modifyImageUrl(this.state.image_url)} alt='' className='crane-image' />
                 <h3>Crane Information</h3>
-                <div>Time of event: { this.state.time }</div>
-                <div>Crane Number: { this.state.crane_number }</div>
-                <div>Weight: { this.state.weight }</div>
-                <div>Altitude: { this.state.altitude }</div>
-                <div>Load Type: { this.state.load_type }</div>
-                <div>Load Type Category: { this.state.load_type_category }</div>
-                <div>Step Number: { this.state.step_number }</div>
-                <div>Step Name: { this.state.step_name } </div>
-                <img src={ this.modifyImageUrl(this.state.image_url)} alt='' />
+                <div className='crane-info'>
+                    <div>Time of event: { this.state.time }</div>
+                    <div>Crane Number: { this.state.crane_number }</div>
+                    <div>Weight: { this.state.weight }</div>
+                    <div>Altitude: { this.state.altitude }</div>
+                    <div>Load Type: { this.state.load_type }</div>
+                    <div>Load Type Category: { this.state.load_type_category }</div>
+                    <div>Step Number: { this.state.step_number }</div>
+                    <div>Step Name: { this.state.step_name } </div>
+                </div>
             </>
         );
     }

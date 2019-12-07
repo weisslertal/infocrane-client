@@ -49,14 +49,14 @@ class App extends Component {
                 <Dropdown options={this.state.cranes} onChange={this.craneDropdownHandler.bind(this)} 
                     value={this.state.craneId} placeholder="Please select a Crane" />
                 
+                {this.state.timestamp &&
+                <CraneInfo url={`${process.env.REACT_APP_API_URL}/crane/data_at_time`} craneId={this.state.craneId} timestamp={this.state.timestamp}/>}
+           
                 {this.state.timeFrom && this.state.timeTo && this.state.craneId &&
                 <Graph url={`${process.env.REACT_APP_API_URL}/sensor_event/altitude_at_time_range`}
                        timeFrom={this.state.timeFrom} timeTo={this.state.timeTo} craneId={this.state.craneId}
                         setTimestampHandler= {this.setTimestampHandler}/>}
 
-                {this.state.timestamp &&
-                <CraneInfo url={`${process.env.REACT_APP_API_URL}/crane/data_at_time`} craneId={this.state.craneId} timestamp={this.state.timestamp}/>}
-           
                 <LoadData/>
             </>
         );
