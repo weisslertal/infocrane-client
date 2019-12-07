@@ -54,7 +54,10 @@ class CraneInfo extends Component {
     }
 
     modifyImageUrl(url){
-        return url.replace('img.versatile.ai', 'img.versatile.ai');
+        if(url == null){
+            return null;
+        }
+        return url.replace('https://img.versatile.ai', 'http://vn-excercise.s3.us-east-1.amazonaws.com/rawdeviceimagedata');
     }
 
     render() {
