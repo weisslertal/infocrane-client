@@ -42,6 +42,9 @@ class Graph extends Component {
                     text: 'Altitude'
                 },
             },
+            tooltip: {
+                enabled: false
+            },
             plotOptions: {
                 series: {
                     marker: {
@@ -53,9 +56,6 @@ class Graph extends Component {
                                 console.log(this.category);
                                 self.props.setTimestampHandler(this.category);
                             },
-                            mouseOut: function() {
-                                this.series.chart.tooltip.hide();
-                            }
                         }
                     }
                 }
