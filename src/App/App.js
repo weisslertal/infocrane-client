@@ -27,12 +27,10 @@ class App extends Component {
         ).then(res => res.json())
             .then(
                 (result) => {
-                    console.log(result);
                     this.setState({
                         cranes: result,
                         craneId: result[0]
                     });
-                    console.log(this.state);
                 },
                 (error) => {
                     console.log('error!!', error);
@@ -69,22 +67,18 @@ class App extends Component {
            timeFrom: parseInt((new Date(e.start).getTime() / 1000).toFixed(0)),
            timeTo: parseInt((new Date(e.end).getTime() / 1000).toFixed(0))
         });
-        console.log(this.state);
     }
 
     craneDropdownHandler(e){
-        console.log(e);
         this.setState({ 
             craneId: e.value
          });
-         console.log(this.state);
     };
 
     setTimestampHandler(timestamp) {
         this.setState({
           timestamp: timestamp
         });
-        console.log(this.state);
       }
 }
 

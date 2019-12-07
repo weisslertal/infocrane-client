@@ -15,7 +15,6 @@ class LoadData extends Component {
     }
 
     runEtl(){
-        console.log(this.state.cycles_url);
         fetch(`${process.env.REACT_APP_API_URL}/etl/load`,
         {   method: 'post',
             headers: {

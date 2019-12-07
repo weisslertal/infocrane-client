@@ -53,9 +53,8 @@ class Graph extends Component {
                     point: {
                         events: {
                             click: function() {
-                                console.log(this.category);
                                 self.props.setTimestampHandler(this.category);
-                            },
+                            }
                         }
                     }
                 }
